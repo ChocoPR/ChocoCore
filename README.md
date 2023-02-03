@@ -1,0 +1,2 @@
+# ChocoCore
+FiveM Resource
