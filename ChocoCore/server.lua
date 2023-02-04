@@ -1,5 +1,5 @@
--- RPCommands Discord Webhook
-rpcommandswebhook = 'WEBHOOK_HERE' -- Change this webhook to where you want the RPCommands logging to be
+-- chococommands Discord Webhook
+chococommandswebhook = 'https://discord.com/api/webhooks/1071212909138550868/KJ7xkY6Rot1VemVVMZJBYigK3YfKp5dm6iJX4Kd6p4vVmTaKmeXA_u6gwDp436d4TWDe' -- Change this webhook to where you want the chococommands logging to be
 
 
 ---------------------------------------------
@@ -52,10 +52,10 @@ Citizen.CreateThread(function()
 end)
 end
 ------------------------------------------------------------------------------
--- RPCommands script
+-- chococommands script
 
 -- Twitter Command
-if Config.rpcommands then
+if Config.chococommands then
 if Config.twitter then
     RegisterCommand("twt", function(source, args, raw)
             if #args <= 0 then
@@ -65,14 +65,14 @@ if Config.twitter then
             local steam = GetPlayerName(source)
             args = table.concat(args, ' ')
             TriggerClientEvent('chatMessage', -1, "TWITTER | ".. GetPlayerName(source) .."", { 30, 144, 255 }, message)
-            PerformHttpRequest(rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**TWITTER:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+            PerformHttpRequest(chococommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**TWITTER:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
         end
     end)
     end
 end
     
     -- Dispatch Command
-    if Config.rpcommands then
+    if Config.chococommands then
     if Config.dispatch then
     RegisterCommand("dispatch", function(source, args, raw)
             if #args <= 0 then
@@ -80,14 +80,14 @@ end
             else
             local message = table.concat(args, " ")
             TriggerClientEvent('chatMessage', -1, "Dispatch | ".. GetPlayerName(source) .."", { 30, 144, 255 }, message)
-            PerformHttpRequest(rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**DISPATCH:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+            PerformHttpRequest(chococommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**DISPATCH:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
         end
     end)
     end
 end
     
     -- Darkweb Command
-    if Config.rpcommands then
+    if Config.chococommands then
     if Config.darkweb then
     RegisterCommand("darkweb", function(source, args, raw)
             if #args <= 0 then
@@ -97,14 +97,14 @@ end
             local steam = GetPlayerName(source)
             args = table.concat(args, ' ')
             TriggerClientEvent('chatMessage', -1, "Dark Web", { 33, 33, 38 }, message)
-            PerformHttpRequest(rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**DARKWEB:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+            PerformHttpRequest(chococommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**DARKWEB:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
         end
     end)
     end
 end
     
     -- News Command
-    if Config.rpcommands then
+    if Config.chococommands then
     if Config.news then
     RegisterCommand("news", function(source, args, raw)
             if #args <= 0 then
@@ -114,13 +114,13 @@ end
             local steam = GetPlayerName(source)
             args = table.concat(args, ' ')
             TriggerClientEvent('chatMessage', -1, "NEWS | ".. GetPlayerName(source) .."", { 194, 255, 51 }, message)
-            PerformHttpRequest(rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**NEWS:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+            PerformHttpRequest(chococommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**NEWS:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
         end
     end)
     end
 end
     -- Do Command
-    if Config.rpcommands then
+    if Config.chococommands then
     if Config.doo then
     RegisterCommand("do", function(source, args, raw)
             if #args <= 0 then
@@ -128,14 +128,14 @@ end
             else
             local message = table.concat(args, " ")
             TriggerClientEvent('chatMessage', -1, "Do | ".. GetPlayerName(source) .."", { 51, 153, 255 }, message)
-            PerformHttpRequest(rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**DO:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+            PerformHttpRequest(chococommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**DO:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
         end
     end)
     end
 end
     
     -- OOC Command
-    if Config.rpcommands then
+    if Config.chococommands then
     if Config.ooc then
     RegisterCommand("ooc", function(source, args, raw)
             if #args <= 0 then
@@ -145,13 +145,13 @@ end
             local steam = GetPlayerName(source)
             args = table.concat(args, ' ')
             TriggerClientEvent('chatMessage', -1, "OOC | ".. GetPlayerName(source) .."", { 128, 128, 128 }, message)
-            PerformHttpRequest(rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**OOC:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+            PerformHttpRequest(chococommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**OOC:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
         end
     end)
     end
 end
     -- Me Command
-    if Config.rpcommands then
+    if Config.chococommands then
     if Config.me then
     RegisterCommand("me", function(source, args, raw)
             if #args <= 0 then
@@ -161,14 +161,14 @@ end
             local steam = GetPlayerName(source)
             args = table.concat(args, ' ')
             TriggerClientEvent('chatMessage', -1, "Me | ".. GetPlayerName(source) .."", { 255, 0, 0 }, message)
-            PerformHttpRequest(rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**ME:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+            PerformHttpRequest(chococommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = "**ME:** ".. message .."", avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
         end
     end)
     end
 end
     
     -- ShowID Command
-    if Config.rpcommands then
+    if Config.chococommands then
     if Config.showid then
     RegisterCommand("showid", function(source, color, msg)
         cm = stringsplit(msg, " ")
@@ -178,7 +178,7 @@ end
                 local lastname = tostring(cm[3])
                 local steam = GetPlayerName(source)
                 TriggerClientEvent("ChocoCore:sendMessageShowID", -1, source, firstname, lastname)
-                PerformHttpRequest(rpcommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = '**ShowID** | **First Name:** ' .. firstname .. ' **Last Name:** ' .. lastname .. '', avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
+                PerformHttpRequest(chococommandswebhook, function(err, text, headers) end, 'POST', json.encode({username = steam, content = '**ShowID** | **First Name:** ' .. firstname .. ' **Last Name:** ' .. lastname .. '', avatar_url = DISCORD_IMAGE}), { ['Content-Type'] = 'application/json' })
                 
             else
                 TriggerClientEvent('chatMessage', source, "Use the following format:", {255, 0, 0}, "/showid [First Name] [Last Name]")
@@ -229,21 +229,21 @@ end
 
 
 
-
-
-
 local branding = 
 [[ 
-    🅲🅷🅾🅲🅾 🅲🅾🆁🅴                                                                                                                        
+    🅲🅷🅾🅲🅾 🅲🅾🆁🅴
+    🅲🅷🅾🅲🅾 🅲🅾🆁🅴
+    🅲🅷🅾🅲🅾 🅲🅾🆁🅴
+    🅲🅷🅾🅲🅾 🅲🅾🆁🅴                                                                                                
   ]]
 
-versionChecker = false -- Set to false to disable version checker
+versionChecker = true -- Set to false to disable version checker
 
 
 -- Don't touch
 resourcename = "ChocoCore"
 version = "1.0.1"
---rawVersionLink = "https://raw.githubusercontent.com/Swqppingg/ChocoCore/main/version.txt"
+rawVersionLink = "https://raw.githubusercontent.com/ChocoPR/ChocoCore/main/ChocoCore/version.txt"
 
 -- Check for version updates.
 if versionChecker then

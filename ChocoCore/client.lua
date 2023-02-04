@@ -697,11 +697,11 @@ if Config.delallveh then
 local delay2 = Config.delay * 1000
 RegisterNetEvent("ChocoCore:delallveh")
 AddEventHandler("ChocoCore:delallveh", function ()
-    --TriggerEvent('chatMessage', Config.delaymessage)
-    TriggerEvent('codem-notification', Config.delaymessage, 10000, 'ann')
+    TriggerEvent('chatMessage', Config.delaymessage)
+  --  TriggerEvent('codem-notification', Config.delaymessage, 10000, 'ann')
     Wait(delay2)
-   --TriggerEvent('chatMessage', Config.deletemessage)
-    TriggerEvent('codem-notification', Config.deletemessage, 10000, 'ann')
+   TriggerEvent('chatMessage', Config.deletemessage)
+   -- TriggerEvent('codem-notification', Config.deletemessage, 10000, 'ann')
     local totalvehc = 0
     local notdelvehc = 0
 

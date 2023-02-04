@@ -5,7 +5,7 @@ Config = {}
 -- Scripts (Set to false to disable) --
 Config.deleteveh = true -- Delete vehicle command (/dv)
 Config.antiswear = true -- Kicks a player when sending specific messages (You can change these messages below)
-Config.rpcommands = false -- /twt, /dispatch, /darkweb, /news, /do, /ooc, /me, /show id commands with discord logging
+Config.chococommands = true -- /twt, /dispatch, /darkweb, /news, /do, /ooc, /me, /show id commands with discord logging
 Config.handsup = true -- Press x to put your hands up
 Config.watermark = true -- Watermark for your server with customizable text
 Config.drag = true -- /drag command (Drags the closest player)
@@ -55,9 +55,9 @@ Config.font = 4 -- Text Font, 0 - 5 possible
 
 
 
--- RPCOMMANDS --
+-- chococommandS --
 
--- Note: These commands will not work if rpcommands is set to false.
+-- Note: These commands will not work if chococommands is set to false.
 -- Enable or disable commands
 -- Set to false to disable
 Config.twitter = true -- /twt command?
