@@ -242,7 +242,7 @@ versionChecker = true -- Set to false to disable version checker
 
 -- Don't touch
 resourcename = "ChocoCore"
-version = "1.0.1"
+version = "1.0.2"
 rawVersionLink = "https://raw.githubusercontent.com/ChocoPR/ChocoCore/main/ChocoCore/version.txt"
 
 -- Check for version updates.
